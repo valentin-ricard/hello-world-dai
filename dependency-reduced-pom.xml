@@ -7,17 +7,6 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.3.0</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>red.knownas.Main</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-      <plugin>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.5.0</version>
         <executions>
@@ -30,6 +19,9 @@
               <transformers>
                 <transformer>
                   <mainClass>red.knownas.Main</mainClass>
+                </transformer>
+                <transformer>
+                  <resource>MANIFEST.MF</resource>
                 </transformer>
               </transformers>
             </configuration>
